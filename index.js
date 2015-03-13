@@ -21,7 +21,7 @@ module.exports = function(opts) {
 };
 
 
-exports.scopes = {
+module.exports.scopes = {
   drive: {
     all: 'https://www.googleapis.com/auth/drive',
     appdata: 'https://www.googleapis.com/auth/drive.appdata',
