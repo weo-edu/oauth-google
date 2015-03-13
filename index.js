@@ -3,7 +3,7 @@ module.exports = function(clientId) {
     baseUrl: 'https://accounts.google.com/o/oauth2/auth',
     scopeDelimiter: ' ',
     scopePrefix: 'openid',
-    scopes: ['profile', 'email'],
+    scope: ['profile', 'email'],
     clientId: clientId,
     display: 'popup',
     popupDefaults: {
