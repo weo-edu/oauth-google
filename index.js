@@ -19,3 +19,16 @@ module.exports = function(opts) {
     oauth.provider = provider;
   };
 };
+
+
+exports.scopes = {
+  drive: {
+    all: 'https://www.googleapis.com/auth/drive',
+    appdata: 'https://www.googleapis.com/auth/drive.appdata',
+    apps_readonly: 'https://www.googleapis.com/auth/drive.apps.readonly',
+    drive_file: 'https://www.googleapis.com/auth/drive.file',
+    drive_metadata_readonly: 'https://www.googleapis.com/auth/drive.metadata.readonly',
+    drive_readonly: 'https://www.googleapis.com/auth/drive.readonly',
+    drive_scripts: 'https://www.googleapis.com/auth/drive.scripts'
+  }
+};
