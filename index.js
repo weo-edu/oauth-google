@@ -1,5 +1,5 @@
 module.exports = function(clientId) {
-  return {
+  var provider = {
     baseUrl: 'https://accounts.google.com/o/oauth2/auth',
     scopeDelimiter: ' ',
     scopePrefix: 'openid',
@@ -10,5 +10,9 @@ module.exports = function(clientId) {
       width: 452,
       height: 633
     }
+  };
+
+  return function(oauth) {
+    oauth.provider = provider;
   };
 };
