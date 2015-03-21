@@ -4,22 +4,19 @@ module.exports = function(opts) {
     scopeDelimiter: ' ',
     scopePrefix: 'openid',
     scope: ['profile', 'email'],
-    display: 'popup',
-    popupDefaults: {
-      width: 452,
-      height: 633
-    }
+    display: 'popup'
   };
 
-  Object.keys(opts).forEach(function(key) {
-    provider[key] = opts[key];
-  });
-
-  return function(oauth) {
-    oauth.provider = provider;
-  };
+  return Object.keys(opts).reduce(function(memo, key) {
+    provider[key] = memo[key];
+    return memo;
+  }, reduce);
 };
 
+module.exports.popupDefaults = {
+  width: 452,
+  height: 633
+};
 
 module.exports.scopes = {
   drive: {
