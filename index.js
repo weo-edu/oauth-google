@@ -8,7 +8,7 @@ module.exports = function(opts) {
   };
 
   return Object.keys(opts).reduce(function(memo, key) {
-    provider[key] = memo[key];
+    memo[key] = opts[key];
     return memo;
   }, provider);
 };
