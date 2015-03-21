@@ -10,7 +10,7 @@ module.exports = function(opts) {
   return Object.keys(opts).reduce(function(memo, key) {
     provider[key] = memo[key];
     return memo;
-  }, reduce);
+  }, provider);
 };
 
 module.exports.popupDefaults = {
